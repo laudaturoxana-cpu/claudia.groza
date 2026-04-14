@@ -25,8 +25,8 @@ const steps = [
     description:
       "Te înscrii și primești acces imediat la materiale și la programul de întâlniri. Eu sunt alături de tine de la primul moment — inclusiv când ai vrea să renunți.",
     icon: "🚀",
-    color: "#2C7A4B",
-    bg: "#EAF3EC",
+    color: "#3B5E8C",
+    bg: "#D4E8F0",
   },
   {
     number: "04",
@@ -34,8 +34,8 @@ const steps = [
     description:
       "Biologia nu se mai tocește. Se înțelege. Și cu înțelegerea vine și nota, și liniștea.",
     icon: "✨",
-    color: "#7B5EA7",
-    bg: "#EDE5F5",
+    color: "#C47B2B",
+    bg: "#EAE0D0",
   },
 ];
 
