@@ -70,26 +70,28 @@ export default function Hero() {
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          opacity="0.35"
+          opacity="0.38"
         >
           {/* Membrană celulară externă */}
-          <ellipse cx="50" cy="50" rx="46" ry="42" stroke="#3B5E8C" strokeWidth="1.5"
-            strokeDasharray="4 3" fill="#D4E8F0" fillOpacity="0.3"
+          <ellipse cx="50" cy="50" rx="46" ry="42" stroke="#2C7A4B" strokeWidth="1.5"
+            strokeDasharray="4 3" fill="#2C7A4B" fillOpacity="0.08"
           />
           {/* Membrană internă */}
-          <ellipse cx="50" cy="50" rx="38" ry="34" stroke="#3B5E8C" strokeWidth="1"
+          <ellipse cx="50" cy="50" rx="38" ry="34" stroke="#2C7A4B" strokeWidth="1"
             fill="none" opacity="0.4"
           />
           {/* Nucleu */}
-          <ellipse cx="50" cy="50" rx="18" ry="16" fill="#3B5E8C" fillOpacity="0.5"
+          <ellipse cx="50" cy="50" rx="18" ry="16" fill="#3B5E8C" fillOpacity="0.55"
             stroke="#3B5E8C" strokeWidth="1.5"
           />
           {/* Nucleol */}
-          <circle cx="50" cy="50" r="6" fill="#C47B2B" fillOpacity="0.7" />
-          {/* Organite — mitocondrii mici */}
-          <ellipse cx="24" cy="36" rx="7" ry="4" fill="#3B5E8C" fillOpacity="0.35" transform="rotate(-30 24 36)" />
-          <ellipse cx="74" cy="64" rx="7" ry="4" fill="#3B5E8C" fillOpacity="0.35" transform="rotate(20 74 64)" />
-          <ellipse cx="30" cy="68" rx="5" ry="3" fill="#3B5E8C" fillOpacity="0.25" transform="rotate(45 30 68)" />
+          <circle cx="50" cy="50" r="6" fill="#C47B2B" fillOpacity="0.75" />
+          {/* Organite — mitocondrii verzi */}
+          <ellipse cx="24" cy="36" rx="7" ry="4" fill="#2C7A4B" fillOpacity="0.5" transform="rotate(-30 24 36)" />
+          <ellipse cx="74" cy="64" rx="7" ry="4" fill="#2C7A4B" fillOpacity="0.5" transform="rotate(20 74 64)" />
+          <ellipse cx="30" cy="68" rx="5" ry="3" fill="#2C7A4B" fillOpacity="0.4" transform="rotate(45 30 68)" />
+          {/* Cloroplaste suplimentare */}
+          <ellipse cx="70" cy="32" rx="5" ry="3" fill="#2C7A4B" fillOpacity="0.35" transform="rotate(-15 70 32)" />
         </svg>
 
         {/* ── 3. FRUNZĂ BOTANICĂ — dreapta mijloc ── */}
@@ -99,23 +101,23 @@ export default function Hero() {
           viewBox="0 0 60 90"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          opacity="0.3"
+          opacity="0.42"
         >
-          {/* Corp frunză */}
+          {/* Corp frunză — verde */}
           <path
             d="M30 85 C30 85, 5 65, 5 40 C5 18, 18 5, 30 2 C42 5, 55 18, 55 40 C55 65, 30 85, 30 85 Z"
-            fill="#3B5E8C" fillOpacity="0.25" stroke="#3B5E8C" strokeWidth="1.5"
+            fill="#2C7A4B" fillOpacity="0.22" stroke="#2C7A4B" strokeWidth="1.5"
           />
           {/* Nervură centrală */}
-          <line x1="30" y1="85" x2="30" y2="5" stroke="#3B5E8C" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="30" y1="85" x2="30" y2="5" stroke="#2C7A4B" strokeWidth="1.5" strokeLinecap="round" />
           {/* Nervuri laterale */}
           {[20, 35, 50, 65].map((y, i) => (
             <g key={y}>
               <line x1="30" y1={y} x2={30 - 12 - i * 2} y2={y + 8}
-                stroke="#3B5E8C" strokeWidth="1" strokeLinecap="round" opacity="0.6"
+                stroke="#2C7A4B" strokeWidth="1" strokeLinecap="round" opacity="0.65"
               />
               <line x1="30" y1={y} x2={30 + 12 + i * 2} y2={y + 8}
-                stroke="#3B5E8C" strokeWidth="1" strokeLinecap="round" opacity="0.6"
+                stroke="#2C7A4B" strokeWidth="1" strokeLinecap="round" opacity="0.65"
               />
             </g>
           ))}
@@ -134,12 +136,12 @@ export default function Hero() {
             points="45,10 73,27 73,63 45,80 17,63 17,27"
             stroke="#3B5E8C" strokeWidth="1.5" fill="none"
           />
-          {/* Atomi în vârfuri */}
+          {/* Atomi în vârfuri — albastru, chihlimbar, verde alternând */}
           {[
             [45, 10], [73, 27], [73, 63], [45, 80], [17, 63], [17, 27]
           ].map(([cx, cy], i) => (
             <circle key={i} cx={cx} cy={cy} r="4.5"
-              fill={i % 2 === 0 ? "#3B5E8C" : "#C47B2B"} opacity="0.8"
+              fill={i % 3 === 0 ? "#3B5E8C" : i % 3 === 1 ? "#2C7A4B" : "#C47B2B"} opacity="0.85"
             />
           ))}
           {/* Atom central */}
