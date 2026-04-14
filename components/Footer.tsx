@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -14,27 +16,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <div className="flex flex-col mb-4">
-              <div className="flex items-baseline gap-1.5 mb-1">
-                <span
-                  className="text-2xl font-normal text-white"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Claudia
-                </span>
-                <span
-                  className="text-2xl font-medium text-[#D4E8F0] uppercase tracking-widest"
-                  style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.12em" }}
-                >
-                  Groza
-                </span>
-              </div>
-              <span
-                className="text-sm text-[#5A6478]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Educația în Valiță
-              </span>
+            <div className="mb-5">
+              <Image
+                src="/logo.svg"
+                alt="Claudia Groza — Educația în Valiță"
+                width={180}
+                height={40}
+                className="h-10 w-auto brightness-0 invert opacity-90"
+              />
             </div>
             <p
               className="text-[#5A6478] text-sm leading-relaxed max-w-xs"

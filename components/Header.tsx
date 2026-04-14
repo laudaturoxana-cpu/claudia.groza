@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,28 +32,20 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex flex-col leading-tight cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <div className="flex items-baseline gap-1.5">
-              <span
-                className="text-xl font-normal text-[#1E2A3A]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Claudia
-              </span>
-              <span
-                className="text-xl font-medium text-[#3B5E8C] uppercase tracking-widest"
-                style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.12em" }}
-              >
-                Groza
-              </span>
-            </div>
-            <span
-              className="text-xs text-[#5A6478] tracking-wide"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              Educația în Valiță
-            </span>
-          </div>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex-shrink-0 hover:opacity-85 transition-opacity duration-200"
+            aria-label="Acasă — Claudia Groza"
+          >
+            <Image
+              src="/logo.svg"
+              alt="Claudia Groza — Educația în Valiță"
+              width={180}
+              height={40}
+              priority
+              className="h-10 w-auto"
+            />
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
