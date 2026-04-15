@@ -34,8 +34,58 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#3B5E8C]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-[#3B5E8C] relative overflow-hidden">
+      {/* Decorații biologice — fundal secțiune contact */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+
+        {/* Helix ADN — colț stânga sus */}
+        <svg className="absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-10"
+          viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0 C8 18,48 22,48 35 C48 48,8 52,8 65 C8 78,48 82,48 95 C48 108,8 112,8 125 C8 138,48 138,48 140"
+            stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3" className="bio-dash"/>
+          <path d="M48 0 C48 18,8 22,8 35 C8 48,48 52,48 65 C48 78,8 82,8 95 C8 108,48 112,48 125 C48 138,8 138,8 140"
+            stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3"/>
+          {[22, 49, 76, 103].map((y) => (
+            <line key={y} x1="11" y1={y} x2="45" y2={y} stroke="#C47B2B" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
+          ))}
+        </svg>
+
+        {/* Frunză — colț dreapta sus */}
+        <svg className="absolute top-8 right-8 w-16 h-24 bio-float opacity-10"
+          style={{ animationDelay: "2s" }}
+          viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 85 C30 85,5 65,5 40 C5 18,18 5,30 2 C42 5,55 18,55 40 C55 65,30 85,30 85 Z"
+            fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1.5"/>
+          <line x1="30" y1="85" x2="30" y2="5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+          {[20, 35, 50, 65].map((y, i) => (
+            <g key={y}>
+              <line x1="30" y1={y} x2={30 - 12 - i * 2} y2={y + 8} stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
+              <line x1="30" y1={y} x2={30 + 12 + i * 2} y2={y + 8} stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
+            </g>
+          ))}
+        </svg>
+
+        {/* Celulă — centru jos */}
+        <svg className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-32 bio-pulse opacity-[0.07]"
+          viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="50" rx="46" ry="42" stroke="white" strokeWidth="1.5" strokeDasharray="4 3" fill="white" fillOpacity="0.1"/>
+          <ellipse cx="50" cy="50" rx="18" ry="16" fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1.5"/>
+          <circle cx="50" cy="50" r="6" fill="#C47B2B" fillOpacity="0.5"/>
+        </svg>
+
+        {/* Moleculă — dreapta jos */}
+        <svg className="absolute bottom-12 right-12 w-20 h-20 bio-spin opacity-[0.08]"
+          viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="45,10 73,27 73,63 45,80 17,63 17,27" stroke="white" strokeWidth="1.5" fill="none"/>
+          {[[45,10],[73,27],[73,63],[45,80],[17,63],[17,27]].map(([cx,cy],i) => (
+            <circle key={i} cx={cx} cy={cy} r="4" fill="white" opacity="0.7"/>
+          ))}
+          <circle cx="45" cy="45" r="5" fill="white" opacity="0.5"/>
+        </svg>
+
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left — text */}
           <div className="lg:pt-4">

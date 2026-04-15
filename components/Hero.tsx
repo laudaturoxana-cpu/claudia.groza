@@ -156,25 +156,65 @@ export default function Hero() {
           ))}
         </svg>
 
-        {/* ── 5. MICROSCOPIE — cercuri concentrice — fundalul drept ── */}
+        {/* ── 5. BACTERII văzute la microscop — dreapta jos ── */}
         <svg
-          className="absolute bottom-16 right-[8%] w-32 h-32 bio-pulse"
-          style={{ animationDelay: "2.5s" }}
-          viewBox="0 0 120 120"
+          className="absolute bottom-16 right-[8%] w-36 h-36 bio-float"
+          style={{ animationDelay: "3s" }}
+          viewBox="0 0 130 130"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          opacity="0.18"
+          opacity="0.28"
         >
-          <circle cx="60" cy="60" r="56" stroke="#3B5E8C" strokeWidth="1" strokeDasharray="5 4" />
-          <circle cx="60" cy="60" r="42" stroke="#3B5E8C" strokeWidth="1" />
-          <circle cx="60" cy="60" r="28" stroke="#C47B2B" strokeWidth="1.5" strokeDasharray="3 3" />
-          <circle cx="60" cy="60" r="14" fill="#3B5E8C" fillOpacity="0.25" stroke="#3B5E8C" strokeWidth="1" />
-          <circle cx="60" cy="60" r="5" fill="#C47B2B" fillOpacity="0.6" />
-          {/* Cruciuliță de aliniere microscopie */}
-          <line x1="60" y1="4" x2="60" y2="20" stroke="#3B5E8C" strokeWidth="1" opacity="0.5" />
-          <line x1="60" y1="100" x2="60" y2="116" stroke="#3B5E8C" strokeWidth="1" opacity="0.5" />
-          <line x1="4" y1="60" x2="20" y2="60" stroke="#3B5E8C" strokeWidth="1" opacity="0.5" />
-          <line x1="100" y1="60" x2="116" y2="60" stroke="#3B5E8C" strokeWidth="1" opacity="0.5" />
+          {/* Ocular microscop — cerc exterior */}
+          <circle cx="65" cy="65" r="60" stroke="#3B5E8C" strokeWidth="1.5" fill="#D4E8F0" fillOpacity="0.12" />
+          {/* Bacterie 1 — bacil */}
+          <ellipse cx="52" cy="52" rx="14" ry="7" fill="#2C7A4B" fillOpacity="0.5" transform="rotate(-25 52 52)" />
+          <ellipse cx="52" cy="52" rx="12" ry="5" fill="#2C7A4B" fillOpacity="0.3" transform="rotate(-25 52 52)" />
+          {/* Flagel bacterie 1 */}
+          <path d="M62 45 C70 38, 75 42, 78 36" stroke="#2C7A4B" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6"/>
+          {/* Bacterie 2 — coc */}
+          <circle cx="82" cy="58" r="9" fill="#3B5E8C" fillOpacity="0.4" />
+          <circle cx="82" cy="58" r="6" fill="#3B5E8C" fillOpacity="0.25" />
+          {/* Bacterie 3 — bacil mic */}
+          <ellipse cx="58" cy="82" rx="10" ry="5" fill="#2C7A4B" fillOpacity="0.45" transform="rotate(20 58 82)" />
+          {/* Bacterie 4 — coc mic */}
+          <circle cx="78" cy="80" r="6" fill="#C47B2B" fillOpacity="0.35" />
+          <circle cx="78" cy="80" r="3.5" fill="#C47B2B" fillOpacity="0.2" />
+          {/* Granule intracelulare */}
+          <circle cx="50" cy="51" r="1.5" fill="white" fillOpacity="0.5" />
+          <circle cx="82" cy="57" r="1.5" fill="white" fillOpacity="0.4" />
+        </svg>
+
+        {/* ── 6. STAMEN FLOARE — stânga mijloc ── */}
+        <svg
+          className="absolute top-2/3 left-[2%] w-14 h-20 bio-float"
+          style={{ animationDelay: "1s", marginTop: "-40px" }}
+          viewBox="0 0 50 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          opacity="0.32"
+        >
+          {/* Tulpină */}
+          <line x1="25" y1="80" x2="25" y2="30" stroke="#2C7A4B" strokeWidth="2" strokeLinecap="round" />
+          {/* Frunzuliță pe tulpină */}
+          <path d="M25 60 C18 54, 10 56, 12 62 C14 68, 24 64, 25 60 Z" fill="#2C7A4B" fillOpacity="0.5" />
+          {/* Petale */}
+          {[0, 60, 120, 180, 240, 300].map((deg, i) => {
+            const rad = (deg * Math.PI) / 180;
+            const px = 25 + 14 * Math.sin(rad);
+            const py = 28 - 14 * Math.cos(rad);
+            return (
+              <ellipse key={i}
+                cx={px} cy={py} rx="6" ry="9"
+                fill={i % 2 === 0 ? "#3B5E8C" : "#2C7A4B"}
+                fillOpacity="0.45"
+                transform={`rotate(${deg} ${px} ${py})`}
+              />
+            );
+          })}
+          {/* Stamen central */}
+          <circle cx="25" cy="28" r="7" fill="#C47B2B" fillOpacity="0.7" />
+          <circle cx="25" cy="28" r="4" fill="#C47B2B" fillOpacity="0.9" />
         </svg>
 
       </div>
@@ -187,17 +227,6 @@ export default function Hero() {
 
           {/* ── COLOANA STÂNGA — text ── */}
           <div className="flex flex-col justify-center">
-            {/* Pill tagline */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-[#D4E8F0] rounded-full mb-8 w-fit">
-              <span className="w-2 h-2 rounded-full bg-[#3B5E8C] flex-shrink-0" />
-              <span
-                className="text-sm text-[#3B5E8C] font-medium"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                21 de ani la catedră · Metodă proprie · Online
-              </span>
-            </div>
-
             {/* H1 */}
             <h1
               className="text-5xl sm:text-6xl xl:text-7xl font-normal text-[#1E2A3A] mb-6"
