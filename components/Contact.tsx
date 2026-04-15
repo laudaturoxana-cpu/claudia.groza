@@ -39,48 +39,58 @@ export default function Contact() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
 
         {/* Helix ADN — colț stânga sus */}
-        <svg className="absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-10"
+        <svg className="absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-30"
           viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8 0 C8 18,48 22,48 35 C48 48,8 52,8 65 C8 78,48 82,48 95 C48 108,8 112,8 125 C8 138,48 138,48 140"
-            stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3" className="bio-dash"/>
+            stroke="#D4E8F0" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3" className="bio-dash"/>
           <path d="M48 0 C48 18,8 22,8 35 C8 48,48 52,48 65 C48 78,8 82,8 95 C8 108,48 112,48 125 C48 138,8 138,8 140"
-            stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3"/>
+            stroke="#D4E8F0" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3"/>
           {[22, 49, 76, 103].map((y) => (
-            <line key={y} x1="11" y1={y} x2="45" y2={y} stroke="#C47B2B" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
+            <line key={y} x1="11" y1={y} x2="45" y2={y} stroke="#C47B2B" strokeWidth="2" strokeLinecap="round" opacity="0.9"/>
+          ))}
+          {[0, 35, 65, 95, 125].map((y, i) => (
+            <circle key={y} cx={i % 2 === 0 ? 8 : 48} cy={y} r="3.5" fill="#D4E8F0" opacity="0.9"/>
           ))}
         </svg>
 
         {/* Frunză — colț dreapta sus */}
-        <svg className="absolute top-8 right-8 w-16 h-24 bio-float opacity-10"
+        <svg className="absolute top-8 right-8 w-16 h-24 bio-float opacity-25"
           style={{ animationDelay: "2s" }}
           viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M30 85 C30 85,5 65,5 40 C5 18,18 5,30 2 C42 5,55 18,55 40 C55 65,30 85,30 85 Z"
-            fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1.5"/>
-          <line x1="30" y1="85" x2="30" y2="5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+            fill="#2C7A4B" fillOpacity="0.4" stroke="#6EC99A" strokeWidth="1.5"/>
+          <line x1="30" y1="85" x2="30" y2="5" stroke="#6EC99A" strokeWidth="1.5" strokeLinecap="round"/>
           {[20, 35, 50, 65].map((y, i) => (
             <g key={y}>
-              <line x1="30" y1={y} x2={30 - 12 - i * 2} y2={y + 8} stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
-              <line x1="30" y1={y} x2={30 + 12 + i * 2} y2={y + 8} stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
+              <line x1="30" y1={y} x2={30 - 12 - i * 2} y2={y + 8} stroke="#6EC99A" strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
+              <line x1="30" y1={y} x2={30 + 12 + i * 2} y2={y + 8} stroke="#6EC99A" strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
             </g>
           ))}
         </svg>
 
         {/* Celulă — centru jos */}
-        <svg className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-32 bio-pulse opacity-[0.07]"
+        <svg className="absolute bottom-8 left-1/2 -translate-x-1/2 w-36 h-36 bio-pulse opacity-20"
           viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="50" rx="46" ry="42" stroke="white" strokeWidth="1.5" strokeDasharray="4 3" fill="white" fillOpacity="0.1"/>
-          <ellipse cx="50" cy="50" rx="18" ry="16" fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1.5"/>
-          <circle cx="50" cy="50" r="6" fill="#C47B2B" fillOpacity="0.5"/>
+          <ellipse cx="50" cy="50" rx="46" ry="42" stroke="#D4E8F0" strokeWidth="1.5" strokeDasharray="4 3" fill="#D4E8F0" fillOpacity="0.06"/>
+          <ellipse cx="50" cy="50" rx="38" ry="34" stroke="#D4E8F0" strokeWidth="1" fill="none" opacity="0.5"/>
+          <ellipse cx="50" cy="50" rx="18" ry="16" fill="#D4E8F0" fillOpacity="0.2" stroke="#D4E8F0" strokeWidth="1.5"/>
+          <circle cx="50" cy="50" r="6" fill="#C47B2B" fillOpacity="0.9"/>
+          <ellipse cx="28" cy="38" rx="6" ry="3.5" fill="#6EC99A" fillOpacity="0.6" transform="rotate(-25 28 38)"/>
+          <ellipse cx="72" cy="62" rx="6" ry="3.5" fill="#6EC99A" fillOpacity="0.6" transform="rotate(20 72 62)"/>
         </svg>
 
-        {/* Moleculă — dreapta jos */}
-        <svg className="absolute bottom-12 right-12 w-20 h-20 bio-spin opacity-[0.08]"
+        {/* Moleculă hexagonală — dreapta jos */}
+        <svg className="absolute bottom-12 right-12 w-24 h-24 bio-spin opacity-25"
           viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="45,10 73,27 73,63 45,80 17,63 17,27" stroke="white" strokeWidth="1.5" fill="none"/>
+          <polygon points="45,10 73,27 73,63 45,80 17,63 17,27" stroke="#D4E8F0" strokeWidth="1.5" fill="none"/>
           {[[45,10],[73,27],[73,63],[45,80],[17,63],[17,27]].map(([cx,cy],i) => (
-            <circle key={i} cx={cx} cy={cy} r="4" fill="white" opacity="0.7"/>
+            <circle key={i} cx={cx} cy={cy} r="4.5"
+              fill={i % 3 === 0 ? "#D4E8F0" : i % 3 === 1 ? "#6EC99A" : "#C47B2B"} opacity="0.9"/>
           ))}
-          <circle cx="45" cy="45" r="5" fill="white" opacity="0.5"/>
+          <circle cx="45" cy="45" r="5.5" fill="#D4E8F0" opacity="0.6"/>
+          {[[45,10],[73,27],[73,63],[45,80],[17,63],[17,27]].map(([x2,y2],i) => (
+            <line key={i} x1="45" y1="45" x2={x2} y2={y2} stroke="#D4E8F0" strokeWidth="0.8" opacity="0.25"/>
+          ))}
         </svg>
 
       </div>

@@ -16,20 +16,6 @@ export default function Hero() {
       ═══════════════════════════════════════════ */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
 
-        {/* Blob mare dreptun — fundal albăstrui */}
-        <svg
-          className="absolute right-0 top-0 h-full w-[52%] opacity-[0.13]"
-          viewBox="0 0 700 900"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMaxYMid slice"
-        >
-          <path
-            d="M150 0 C350 80, 700 100, 680 350 C660 600, 480 680, 520 850 C560 1020, 200 900, 150 900 Z"
-            fill="#3B5E8C"
-          />
-        </svg>
-
         {/* ── 1. HELIX ADN — dreapta sus ── */}
         <svg
           className="absolute top-24 right-[6%] w-20 h-52 bio-float-slow"
