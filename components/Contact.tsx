@@ -38,8 +38,8 @@ export default function Contact() {
       {/* Decorații biologice — fundal secțiune contact */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
 
-        {/* Helix ADN — colț stânga sus, ascuns pe mobile */}
-        <svg className="hidden sm:block absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-30"
+        {/* Helix ADN — colț stânga sus, vizibil și pe mobile (mai mic) */}
+        <svg className="absolute -top-2 -left-2 w-14 h-28 sm:w-24 sm:h-40 bio-float-slow opacity-25 sm:opacity-30"
           viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8 0 C8 18,48 22,48 35 C48 48,8 52,8 65 C8 78,48 82,48 95 C48 108,8 112,8 125 C8 138,48 138,48 140"
             stroke="#D4E8F0" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3" className="bio-dash"/>
@@ -53,8 +53,8 @@ export default function Contact() {
           ))}
         </svg>
 
-        {/* Frunză — colț dreapta sus, ascunsă pe mobile */}
-        <svg className="hidden sm:block absolute top-8 right-8 w-16 h-24 bio-float opacity-25"
+        {/* Frunză — colț dreapta sus, vizibilă și pe mobile */}
+        <svg className="absolute top-6 right-4 w-10 h-16 sm:w-16 sm:h-24 bio-float opacity-20 sm:opacity-25"
           style={{ animationDelay: "2s" }}
           viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M30 85 C30 85,5 65,5 40 C5 18,18 5,30 2 C42 5,55 18,55 40 C55 65,30 85,30 85 Z"

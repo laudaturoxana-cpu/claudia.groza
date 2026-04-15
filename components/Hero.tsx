@@ -41,9 +41,9 @@ export default function Hero() {
           ))}
         </svg>
 
-        {/* 2. CELULĂ — ascunsă pe mobile, vizibilă de la md+ */}
+        {/* 2. CELULĂ — mică pe mobile (colț stânga jos), mare de la md */}
         <svg
-          className="hidden md:block absolute bottom-24 left-[4%] w-28 h-28 bio-pulse"
+          className="absolute bottom-20 left-[3%] w-16 h-16 md:w-28 md:h-28 bio-pulse"
           viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
           opacity="0.35"
         >
@@ -60,10 +60,10 @@ export default function Hero() {
           <ellipse cx="70" cy="32" rx="5" ry="3" fill="#2C7A4B" fillOpacity="0.35" transform="rotate(-15 70 32)"/>
         </svg>
 
-        {/* 3. FRUNZĂ — dreapta, vizibilă de la sm+ */}
+        {/* 3. FRUNZĂ — vizibilă pe toate, mai mică pe mobile */}
         <svg
-          className="hidden sm:block absolute top-1/2 right-[1%] w-12 h-18 sm:w-16 sm:h-24 bio-float"
-          style={{ marginTop: "-48px" }}
+          className="absolute top-1/2 right-[1%] w-10 h-16 sm:w-16 sm:h-24 bio-float"
+          style={{ marginTop: "-32px" }}
           viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg"
           opacity="0.38"
         >
@@ -80,9 +80,9 @@ export default function Hero() {
           ))}
         </svg>
 
-        {/* 4. MOLECULĂ — ascunsă pe mobile, vizibilă de la lg+ (stânga sus) */}
+        {/* 4. MOLECULĂ — mică sus-stânga pe mobile, nu suprapune H1 */}
         <svg
-          className="hidden lg:block absolute top-32 left-[5%] w-24 h-24 bio-spin"
+          className="absolute top-24 left-[3%] w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bio-spin"
           viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg"
           opacity="0.18"
         >
@@ -120,10 +120,10 @@ export default function Hero() {
           <circle cx="50" cy="51" r="1.5" fill="white" fillOpacity="0.5"/>
         </svg>
 
-        {/* 6. FLOARE — ascunsă pe mobile, vizibilă de la md+ */}
+        {/* 6. FLOARE — mică pe mobile, stânga mijloc */}
         <svg
-          className="hidden md:block absolute top-2/3 left-[2%] w-14 h-20 bio-float"
-          style={{ animationDelay: "1s", marginTop: "-40px" }}
+          className="absolute top-2/3 left-[1%] w-10 h-14 md:w-14 md:h-20 bio-float"
+          style={{ animationDelay: "1s", marginTop: "-28px" }}
           viewBox="0 0 50 80" fill="none" xmlns="http://www.w3.org/2000/svg"
           opacity="0.30"
         >
