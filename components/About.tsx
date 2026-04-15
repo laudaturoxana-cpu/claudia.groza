@@ -25,18 +25,18 @@ export default function About() {
             Povestea mea
           </span>
           <h2
-            className="text-4xl sm:text-5xl font-normal text-[#1E2A3A]"
+            className="text-3xl sm:text-4xl md:text-5xl font-normal text-[#1E2A3A]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Cine sunt eu
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Photo placeholder */}
-          <div className="relative">
+          <div className="relative pb-6 sm:pb-0">
             <div
-              className="aspect-[4/5] rounded-2xl flex items-center justify-center overflow-hidden relative"
+              className="aspect-[3/2] sm:aspect-[4/3] lg:aspect-[4/5] rounded-2xl flex items-center justify-center overflow-hidden relative"
               style={{ backgroundColor: "#EAE0D0" }}
             >
               {/* Placeholder photo area */}
@@ -69,7 +69,7 @@ export default function About() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-4 bg-[#C47B2B] text-white rounded-xl p-4 shadow-lg">
+            <div className="absolute bottom-2 sm:-bottom-4 -right-2 sm:-right-4 bg-[#C47B2B] text-white rounded-xl p-3 sm:p-4 shadow-lg">
               <p
                 className="text-3xl font-bold leading-none"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -88,7 +88,7 @@ export default function About() {
           {/* Text content */}
           <div className="lg:pt-4">
             {/* Stats row */}
-            <div className="flex gap-8 mb-10">
+            <div className="flex gap-6 sm:gap-8 mb-8 sm:mb-10">
               {highlights.map((h) => (
                 <div key={h.label} className="text-center">
                   <p

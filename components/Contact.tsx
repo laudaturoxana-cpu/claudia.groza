@@ -38,8 +38,8 @@ export default function Contact() {
       {/* Decorații biologice — fundal secțiune contact */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
 
-        {/* Helix ADN — colț stânga sus */}
-        <svg className="absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-30"
+        {/* Helix ADN — colț stânga sus, ascuns pe mobile */}
+        <svg className="hidden sm:block absolute -top-4 -left-4 w-24 h-40 bio-float-slow opacity-30"
           viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8 0 C8 18,48 22,48 35 C48 48,8 52,8 65 C8 78,48 82,48 95 C48 108,8 112,8 125 C8 138,48 138,48 140"
             stroke="#D4E8F0" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="6 3" className="bio-dash"/>
@@ -53,8 +53,8 @@ export default function Contact() {
           ))}
         </svg>
 
-        {/* Frunză — colț dreapta sus */}
-        <svg className="absolute top-8 right-8 w-16 h-24 bio-float opacity-25"
+        {/* Frunză — colț dreapta sus, ascunsă pe mobile */}
+        <svg className="hidden sm:block absolute top-8 right-8 w-16 h-24 bio-float opacity-25"
           style={{ animationDelay: "2s" }}
           viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M30 85 C30 85,5 65,5 40 C5 18,18 5,30 2 C42 5,55 18,55 40 C55 65,30 85,30 85 Z"
@@ -68,8 +68,8 @@ export default function Contact() {
           ))}
         </svg>
 
-        {/* Celulă — centru jos */}
-        <svg className="absolute bottom-8 left-1/2 -translate-x-1/2 w-36 h-36 bio-pulse opacity-20"
+        {/* Celulă — centru jos, ascunsă pe mobile */}
+        <svg className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 w-36 h-36 bio-pulse opacity-20"
           viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="50" cy="50" rx="46" ry="42" stroke="#D4E8F0" strokeWidth="1.5" strokeDasharray="4 3" fill="#D4E8F0" fillOpacity="0.06"/>
           <ellipse cx="50" cy="50" rx="38" ry="34" stroke="#D4E8F0" strokeWidth="1" fill="none" opacity="0.5"/>
@@ -79,8 +79,8 @@ export default function Contact() {
           <ellipse cx="72" cy="62" rx="6" ry="3.5" fill="#6EC99A" fillOpacity="0.6" transform="rotate(20 72 62)"/>
         </svg>
 
-        {/* Moleculă hexagonală — dreapta jos */}
-        <svg className="absolute bottom-12 right-12 w-24 h-24 bio-spin opacity-25"
+        {/* Moleculă hexagonală — dreapta jos, ascunsă pe mobile */}
+        <svg className="hidden sm:block absolute bottom-12 right-12 w-24 h-24 bio-spin opacity-25"
           viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <polygon points="45,10 73,27 73,63 45,80 17,63 17,27" stroke="#D4E8F0" strokeWidth="1.5" fill="none"/>
           {[[45,10],[73,27],[73,63],[45,80],[17,63],[17,27]].map(([cx,cy],i) => (
@@ -106,7 +106,7 @@ export default function Contact() {
               Hai să vorbim
             </span>
             <h2
-              className="text-4xl sm:text-5xl font-normal text-white mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Hai să vorbim

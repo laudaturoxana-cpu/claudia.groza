@@ -37,7 +37,7 @@ export default function Testimonials() {
             Rezultate reale
           </span>
           <h2
-            className="text-4xl sm:text-5xl font-normal text-[#1E2A3A]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1E2A3A]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Ce spun cei care au trecut prin asta

@@ -48,7 +48,7 @@ export default function ForCine() {
             Ești în locul potrivit
           </span>
           <h2
-            className="text-4xl sm:text-5xl font-normal text-[#1E2A3A]"
+            className="text-3xl sm:text-4xl md:text-5xl font-normal text-[#1E2A3A]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Te recunoști?
